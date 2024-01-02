@@ -1,0 +1,27 @@
+<p>login works!</p>
+
+<!-- <form>
+    <label for="id1">UserName:</label>
+    <input type="text" id="id1" name="uname" [(ngModel)]="uname">
+    <button type="submit" routerLink="/user">login</button>
+</form> -->
+
+<input type="text" class="form-control w-25"name="username" /> 
+<br>
+<button class="btn btn-primary" (click)="login()" routerLink="/user" [queryParams]="{'username':uname}">Login</button>
+<!-- <form #signupForm="ngForm" (ngSubmit)="save(signupForm)">
+    <div class="mb-3">
+        <label for="id1" class="form-label">UserName</label>
+        <input type="text" class="form-control" id="id1" name="username" ngModel required pattern="[A-Z][a-z]{2,10}"
+            minlength="2" #username="ngModel">
+        <div class="row" *ngIf="username.touched &&  username.invalid">
+            <div class="invalid-feedback d-block" *ngIf="username.errors?.['required']">It is required</div>
+            <div class="invalid-feedback d-block" *ngIf="username.errors?.['pattern']">Please enter the valid name
+            </div>
+            <div class="invalid-feedback d-block" *ngIf="username.errors?.['minlength']">Minimum 2 characters are
+                required</div>
+        </div>
+    </div>
+     <input type="submit" class="btn btn-primary"  [disabled]="!signupForm.valid"> -->
+    <!-- <button (click)="login()" routerLink="/user">login</button>  -->
+
